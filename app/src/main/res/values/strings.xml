@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Twitter Sample</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_secondary">SecondaryActivity</string>
+    <string name="title_activity_login_to_twitter">LoginToTwitterActivity</string>
+    <string name="twitter_no_login">Use the switch button to log in.</string>
+    <string name="twitter_logged_in">User name: %s</string>
+    <string name="button_post">Update status</string>
+    <string name="go_to_second_activity">Go to the next activity</string>
+    <string name="twitter_name">Twitter</string>
+    <string name="logout">Logout</string>
+    <string name="hint_for_update_status">What\'s on your mind?</string>
+
+</resources>
