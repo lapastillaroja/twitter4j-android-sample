@@ -72,8 +72,10 @@ public class TwitterFragment extends Fragment {
         super.onResume();
         BusProvider.getInstance().register(this);
 
+        //FIXME
         if (TwitterUserPreferences.getUserLoggedIn(getActivity())) {
-            new GetTwitterUser().execute();
+            //new GetTwitterUser().execute();
+            mSwitch.setChecked(true);
         } else {
             updateLoggedOutUI();
         }
@@ -124,8 +126,11 @@ public class TwitterFragment extends Fragment {
         Toast.makeText(getActivity(), "Checked OnCheckedChanged:" + Boolean.toString(checked),
                 Toast.LENGTH_SHORT).show();
 
-        //FIXME
         setSwitchTwitterChecked(checked);
+
+        if (!checked) {
+            return;
+        }
 
         if (!TwitterUserPreferences.getUserLoggedIn(getActivity())) {
             new TwitterLoginTask().execute();
@@ -251,6 +256,6 @@ public class TwitterFragment extends Fragment {
     private void setSwitchTwitterChecked(boolean checked) {
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences(PREFS_NAME_TAG,
                 Context.MODE_PRIVATE);
-        sharedPreferences.edit().putBoolean(SHARED_PREF_SWITCH_TWITTER_STATUS, checked).commit();
+        sharedPreferences.edit().putBoolean(SHARED_PREF_SWITCH_TWITTER_STATUS, checked).apply();
     }
 }

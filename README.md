@@ -7,7 +7,7 @@ twitter4j sample application for Android.
 ![Screenshot](screenshots/screenshot_1.png)
 
 Libraries: [Otto] & [Butter Knife]
-To get started please edit the twitter4j.properties Consumer Key, Consumer Secret & Callback Url with your own keys.
+To get started please edit the twitter4j.properties oauth.consumerKey, oauth.consumerSecret & oauth.callbackUrlConsumer with your own.
 
 ```sh
 oauth.consumerKey=xxxx
